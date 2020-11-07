@@ -38,11 +38,11 @@ public class SpaceCraftController {
             @RequestParam(value = "lowerlimit", defaultValue = "0") Integer lower,
             @ApiParam(value = "higher speed limit")
             @RequestParam(value = "higherlimit",
-                                                          defaultValue = Integer.MAX_VALUE + "")
-                                                          Integer higher) {
+                    defaultValue = Integer.MAX_VALUE + "")
+                    Integer higher) {
 
 
-        return spaceCrafts.stream().filter(s-> s.getSpeed() > lower && s.getSpeed() < higher).
+        return spaceCrafts.stream().filter(s -> s.getSpeed() > lower && s.getSpeed() < higher).
                 collect(Collectors.toList());
     }
 
